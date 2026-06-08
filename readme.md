@@ -5,7 +5,7 @@
 
 50系显卡推荐使用该博主的博客配置mmcv环境 https://blog.csdn.net/qq_43356449/article/details/147192685#comments_38658181
 
-需要基于自己实验环境下的torch版本安装相关mmcv对应版本的库，以下教程仅在英伟达50系显卡上进行过验证，非50系可以参考部分流程
+需要基于自己实验环境下的torch版本安装相关mmcv对应版本的库，以下教程仅在英伟达50系显卡上进行过验证，，非50系可以参考部分流程
 
 首先win+r输入cmd打开终端，开始创建环境
 
@@ -14,7 +14,7 @@ conda create -n openmmlab python=3.9 -y
 conda activate openmmlab
 ```
 
-然后安装torch
+然后安装torch（运行下列指令需显卡cuda版本大于12.8，否则建议下载过往版本的torch）
 
 ```
 pip install torch==2.8.0 torchvision==0.23.0 torchaudio==2.8.0 --index-url https://download.pytorch.org/whl/cu128
