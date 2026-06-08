@@ -8,24 +8,30 @@
 需要基于自己实验环境下的torch版本安装相关mmcv对应版本的库，以下教程仅在英伟达50系显卡上进行过验证，非50系可以参考部分流程
 
 首先win+r输入cmd打开终端，开始创建环境
+
 ``
 conda create -n openmmlab python=3.9 -y
 conda activate openmmlab
 ``
 
 然后安装torch
+
 ``
 pip install torch==2.8.0 torchvision==0.23.0 torchaudio==2.8.0 --index-url https://download.pytorch.org/whl/cu128
 ``
 
 验证安装是否成功
+
 ``python -c "import torch; print(torch.__version__); print(torch.cuda.is_available())"
 ``
 
 配置mmcv环境
+
 `pip install -U openmim
-mim install mmcv==2.1.0  #这是我唯一试出来可行的版本
+mim install mmcv==2.1.0 
 `
+
+2.1.0是50系显卡目前唯一可用的mmcv版本，第一次安装可能需要较长时间编译，如果发生闪退或者电脑重启可能是内存不足导致的（编译过程需要占用大量内存资源），如果是内存不足的话不建议重复尝试编译该包。
 
 然后将使用cd指令将终端的工作目录跳转到下载的项目文件的解压文件夹目录下，运行指令，将项目文件中的mmseg包导入到conda环境中
 ``pip install -r requirements/build.txt
