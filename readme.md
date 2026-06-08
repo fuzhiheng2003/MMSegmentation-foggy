@@ -1,11 +1,11 @@
 # 环境配置
 首先需要准备好conda以及torch环境,安装conda这一步建议查找相关博客解决
 
-并基于实验环境下的torch版本安装相关mmcv对应版本的库
+关于MMSegmentation框架本身的信息可以查询它在github上的原版readme：https://github.com/open-mmlab/mmsegmentation
 
-50系显卡推荐使用该博主的博客配置mmcv环境https://blog.csdn.net/qq_43356449/article/details/147192685#comments_38658181
+50系显卡推荐使用该博主的博客配置mmcv环境 https://blog.csdn.net/qq_43356449/article/details/147192685#comments_38658181
 
-以下教程仅在英伟达50系显卡上进行过验证，非50系可以参考部分流程
+需要基于自己实验环境下的torch版本安装相关mmcv对应版本的库，以下教程仅在英伟达50系显卡上进行过验证，非50系可以参考部分流程
 
 首先win+r输入cmd打开终端，开始创建环境
 ``
