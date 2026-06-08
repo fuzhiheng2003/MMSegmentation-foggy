@@ -43,7 +43,7 @@ pip install -r requirements/build.txtpip install -v -e .
 
 由于mmseg包的特性，该环境下的mmseg是绑定该项目本身的，如果还需要运行另外一个mmseg项目，则需要重新创建一个新环境
 # 数据集配置
-将下载好的数据集放到对应的data文件夹内，注意不要嵌套，即data文件夹内的数据集名称文件夹为一级文件夹，二级文件夹为train，val等子文件夹
+将下载好的数据集放到对应的data文件夹内，注意不要嵌套，即data文件夹内的数据集名称文件夹为一级文件夹，例如以cityscapes数据集为例，cityscape为一级文件夹，其中包含gtFine和leftImg8bit两个子文件夹
 
 # 训练，推理和测试
 在打开的终端内，激活该项目对应的conda环境`conda activate openmmlab`，然后使用cd指令跳转到该项目的目录下，输入
