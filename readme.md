@@ -9,33 +9,37 @@
 
 首先win+r输入cmd打开终端，开始创建环境
 
-``
+```
 conda create -n openmmlab python=3.9 -y
 conda activate openmmlab
-``
+```
 
 然后安装torch
 
-``
+```
 pip install torch==2.8.0 torchvision==0.23.0 torchaudio==2.8.0 --index-url https://download.pytorch.org/whl/cu128
-``
+```
 
 验证安装是否成功
 
-``python -c "import torch; print(torch.__version__); print(torch.cuda.is_available())"
-``
+```
+python -c "import torch; print(torch.__version__); print(torch.cuda.is_available())"
+```
 
 配置mmcv环境
 
-`pip install -U openmim
+```
+pip install -U openmim
 mim install mmcv==2.1.0 
-`
+```
 
 2.1.0是50系显卡目前唯一可用的mmcv版本，第一次安装可能需要较长时间编译，如果发生闪退或者电脑重启可能是内存不足导致的（编译过程需要占用大量内存资源），如果是内存不足的话不建议重复尝试编译该包。
 
-然后将使用cd指令将终端的工作目录跳转到下载的项目文件的解压文件夹目录下，运行指令，将项目文件中的mmseg包导入到conda环境中
-``pip install -r requirements/build.txt
-pip install -v -e .``
+配置好环境后，使用cd指令将终端的工作目录跳转到下载的项目文件的解压文件夹目录下，运行下方指令，将项目文件中的mmseg包导入到conda环境中
+
+```
+pip install -r requirements/build.txtpip install -v -e .
+```
 
 由于mmseg包的特性，该环境下的mmseg是绑定该项目本身的，如果还需要运行另外一个mmseg项目，则需要重新创建一个新环境
 # 数据集配置
