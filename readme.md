@@ -14,7 +14,7 @@ conda create -n openmmlab python=3.9 -y
 conda activate openmmlab
 ```
 
-然后安装torch（运行下列指令需显卡cuda版本大于12.8，否则建议下载过往版本的torch）
+然后安装torch（运行下列指令需显卡cuda版本大于或等于12.8，打开终端输入nvidia-smi即可查看显卡cuda版本，否则建议下载过往版本的torch）
 
 ```
 pip install torch==2.8.0 torchvision==0.23.0 torchaudio==2.8.0 --index-url https://download.pytorch.org/whl/cu128
