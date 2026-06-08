@@ -1,0 +1,43 @@
+
+
+
+python tools/analysis_tools/benchmark_voc.py configs/stdc1/1_stdc2_in1k-pre_b8x80k_acdc_fog-512x1024.py work_dirs/1_stdc2_in1k-pre_b8x80k_acdc_fog-512x1024_06569/best_mIoU_iter_70000.pth --fuse-conv-bn
+python tools/analysis_tools/benchmark1.py configs/stdc1/1_stdc2_in1k-pre_b8x80k_cityscapes-512x1024.py work_dirs/1_stdc2_in1k-pre_b8x80k_acdc_fog-512x1024_l1_06627/best_mIoU_iter_70000.pth  --work-dir fps
+
+fcn
+python tools/analysis_tools/benchmark1.py configs/fcn/fcn_r50-d8_4xb2-80k_cityscapes-512x1024.py work_dirs/fcn_r50-d8_4xb2-80k_acdc_fog-512x1024_05296/iter_78000.pth
+python tools/analysis_tools/benchmark1024x2048.py configs/fcn/fcn_r50-d8_4xb2-80k_cityscapes-512x1024.py work_dirs/fcn_r50-d8_4xb2-80k_acdc_fog-512x1024_05296/iter_78000.pth
+psp
+python tools/analysis_tools/benchmark1.py configs/pspnet/pspnet_r18-d8_4xb2-80k_cityscapes-512x1024.py work_dirs/pspnet_r18-d8_4xb2-80k_acdc_fog-512x1024/best_mIoU_iter_76000.pth  --work-dir fps
+python tools/analysis_tools/benchmark1024x2048.py configs/pspnet/pspnet_r18-d8_4xb2-80k_cityscapes-512x1024.py work_dirs/pspnet_r18-d8_4xb2-80k_acdc_fog-512x1024/best_mIoU_iter_76000.pth  --work-dir fps
+
+bisenet
+python tools/analysis_tools/benchmark1.py configs/bisenetv1/bisenetv1_r18-d32-in1k-pre_4xb8-80k_cityscapes-512x1024.py work_dirs/bisenetv1_r18-d32-in1k-pre_4xb8-80k_acdc_fog-512x1024_05618/best_mIoU_iter_76000.pth
+python tools/analysis_tools/benchmark.py configs/bisenetv1/bisenetv1_r18-d32-in1k-pre_4xb8-80k_cityscapes-512x1024.py work_dirs/bisenetv1_r18-d32-in1k-pre_4xb8-80k_acdc_fog-512x1024_05618/best_mIoU_iter_76000.pth
+python tools/analysis_tools/benchmark1.py configs/bisenetv1/bisenetv1_r50-d32-in1k-pre_4xb4-80k_cityscapes-512x1024.py work_dirs/bisenetv1_r18-d32-in1k-pre_4xb8-80k_acdc_fog-512x1024_05618/best_mIoU_iter_76000.pth
+
+deeplabV3
+python tools/analysis_tools/benchmark1.py configs/deeplabv3plus/deeplabv3plus_r18-d8_4xb2-80k_cityscapes-512x1024.py work_dirs/deeplabv3plus_r18-d8_4xb3-80k_cityscapes-512x1024_07284/best_mIoU_iter_80000.pth
+python tools/analysis_tools/benchmark1024x2048.py configs/deeplabv3plus/deeplabv3plus_r18-d8_4xb2-80k_cityscapes-512x1024.py work_dirs/deeplabv3plus_r18-d8_4xb3-80k_cityscapes-512x1024_07284/best_mIoU_iter_80000.pth
+
+
+stdc
+python tools/analysis_tools/benchmark1.py configs/stdc/stdc2_in1k-pre_4xb12-80k_cityscapes-512x1024.py work_dirs/stdc2_in1k-pre_4xb12-80k_cityscapes-512x1024_07495/best_mIoU_iter_80000.pth
+
+stdc l1
+L1
+python tools/analysis_tools/benchmark1.py configs/stdc1/1_stdc2_in1k-pre_b8x80k_cityscapes-512x1024.py work_dirs/1_stdc2_in1k-pre_b8x80k_acdc_fog-512x1024_L1_06465/best_mIoU_iter_80000.pth
+L1+ASPP
+python tools/analysis_tools/benchmark1.py configs/stdc1/1_stdc2_in1k-pre_b8x80k_cityscapes-512x1024.py work_dirs/1_stdc2_in1k-pre_b8x80k_acdc_fog-512x1024_l1_06627/best_mIoU_iter_70000.pth
+L0
+python tools/analysis_tools/benchmark1.py configs/stdc1/1_stdc2_in1k-pre_b8x80k_cityscapes-512x1024.py work_dirs/1_stdc2_in1k-pre_b8x80k_acdc_fog-512x1024_s_en1_06352/best_mIoU_iter_78000.pth
+L0+ASPP
+python tools/analysis_tools/benchmark1.py configs/stdc1/1_stdc2_in1k-pre_b8x80k_cityscapes-512x1024.py work_dirs/1_stdc2_in1k-pre_b8x80k_acdc_fog-512x1024_06569/best_mIoU_iter_70000.pth
+ASPP
+python tools/analysis_tools/benchmark1.py configs/stdc1/1_stdc2_in1k-pre_b8x80k_cityscapes-512x1024.py work_dirs/1_stdc2_in1k-pre_b8x80k_cityscapes-512x1024_ASPP_07544/best_mIoU_iter_80000.pth
+
+python tools/analysis_tools/benchmark.py configs/stdc1/1_stdc2_in1k-pre_b8x80k_cityscapes-512x1024.py work_dirs/1_stdc2_in1k-pre_b8x80k_acdc_fog-512x1024_L1_06465/best_mIoU_iter_80000.pth
+
+
+python tools/analysis_tools/benchmark1.py configs/stdc1/1_stdc2_in1k-pre_b8x80k_cityscapes-512x1024.py work_dirs/1_stdc2_in1k-pre_b8x80k_acdc_fog-512x1024_l1_06627/best_mIoU_iter_70000.pth
+
